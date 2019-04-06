@@ -8,7 +8,7 @@
 # 	-v /usr/src:/usr/src:ro \
 # 	r.j3ss.co/wireguard:install
 #
-FROM alpine:latest
+FROM s390x/alpine
 LABEL maintainer "Jessie Frazelle <jess@linux.com>"
 
 RUN apk add --no-cache \
