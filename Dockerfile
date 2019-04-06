@@ -23,8 +23,8 @@ ENV WIREGUARD_VERSION 0.0.20190406
 
 RUN set -x \
   && apk update && apk upgrade\
+  && apk add git \
 	&& apk add --no-cache --virtual .build-deps \
-		git \
 	&& git clone --depth 1 --branch "${WIREGUARD_VERSION}" https://git.zx2c4.com/WireGuard.git /wireguard \
 	&& ( \
 		cd /wireguard/src \
